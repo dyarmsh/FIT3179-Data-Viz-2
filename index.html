@@ -63,19 +63,19 @@
 
     <script type="text/javascript">
         // Load and render the choropleth map
-        var map = "choropleth_map.vg.json";
+        var map = "js/choropleth_map.vg.json";
         vegaEmbed('#choropleth_map', map).then(function(result) {
             console.log("Choropleth map rendered successfully");
         }).catch(console.error);
         
         // Load and render the radial plot
-        var radialPlot = "radial_plot.vg.json"; // Ensure this file is correctly formatted and accessible
+        var radialPlot = "js/radial_plot.vg.json"; // Ensure this file is correctly formatted and accessible
         vegaEmbed('#radial_plot', radialPlot).then(function(result) {
             console.log("Radial plot rendered successfully");
         }).catch(console.error);
 
         // Load and render the parallel coordinates plot
-        var parallelCoordPlot = "para_coord_plot.vg.json"; // Ensure this file is correctly formatted and accessible
+        var parallelCoordPlot = "js/para_coord_plot.vg.json"; // Ensure this file is correctly formatted and accessible
         vegaEmbed('#para_coord_plot', parallelCoordPlot).then(function(result) {
             console.log("Parallel Coordinates plot rendered successfully");
         }).catch(console.error);
