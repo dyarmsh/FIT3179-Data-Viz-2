@@ -1,0 +1,39 @@
+﻿2024 RANK,2023 RANK,Institution Name,Country Code,Country,Latitude,Longitude,City,State,SIZE,FOCUS,RES.,AGE,STATUS,Academic Reputation Score,Employer Reputation Score,Faculty Student Score,Citations per Faculty Score,International Faculty Score,International Students Score,International Research Network Score,Employment Outcomes Score,Sustainability Score,Overall SCORE
+14,33,The University of Melbourne,AU,Australia,-37.7980576318862,144.961124200527,Melbourne,VIC,XL,FC,VH,5,A,98.4,92.3,15.4,92.1,92.9,99.7,97.2,93.3,90.4,87.9
+19,45,The University of New South Wales (UNSW Sydney),AU,Australia,-33.9169730357430,151.231353327355,Sydney,NSW,XL,FC,VH,4,A,89.7,88.1,18.2,95.9,100,99.1,99,95.5,99.6,86.7
+19,41,The University of Sydney,AU,Australia,-33.8880478214170,151.186957915712,Sydney,NSW,XL,FC,VH,5,A,96,87.7,11.8,93.5,99.5,100,91.9,88.1,99.7,86.7
+34,30,The Australian National University,AU,Australia,-35.2811043825994,149.118334525558,Canberra,ACT,L,FC,VH,4,A,93.2,70.2,34.9,92.8,100,93.3,78.5,43.9,87.4,81.5
+42,57,Monash University,AU,Australia,-37.9140299637663,145.134680654502,Melbourne,VIC,XL,FC,VH,4,A,88.4,75.2,9.6,88.4,100,100,86.8,61,71.8,78.2
+43,50,The University of Queensland,AU,Australia,-27.0557389726921,153.035170481946,Brisbane,QLD,XL,FC,VH,5,A,87.1,73.7,21.6,87,100,100,95,44.4,73.1,78.1
+72,90,The University of Western Australia,AU,Australia,-31.9559491391248,115.814931748237,Perth,WA,L,FC,VH,5,A,56.2,44.6,16.5,98.9,100,99.8,90,66,70.1,66.9
+89,109,The University of Adelaide,AU,Australia,-34.9139086447245,138.600673606606,Adelaide,SA,L,FC,VH,5,A,54.2,36.5,16.2,87.1,100,99.6,78.8,38.4,96.3,62
+90,137,University of Technology Sydney,AU,Australia,-33.8835209737201,151.200579435025,Sydney,NSW,L,CO,VH,3,A,43.4,57.8,9,95.3,96.6,93.6,79.7,30.1,93.1,61.8
+130,195,Macquarie University,AU,Australia,-33.7731445391750,151.112263259593,Sydney,NSW,L,FC,VH,4,A,31.6,41,10.3,81.3,98.6,93.6,81.4,43.2,91.8,53.7
+140,190,RMIT University,AU,Australia,-37.8069639805585,144.964956639710,Melbourne,VIC,XL,CO,VH,3,A,38.6,49.6,5.4,68.6,100,92.8,57.3,28.8,96.2,52.4
+162,185,University of Wollongong,AU,Australia,-34.4051359781041,150.877828667852,Wollongong,NSW,L,FC,VH,3,A,29.7,25.1,16.3,93.8,95.6,56,72.7,17.1,92.3,50.1
+173,192,"The University of Newcastle, Australia (UON)",AU,Australia,-32.7982600925714,151.768411416265,Newcastle,NSW,M,FC,VH,4,A,29.3,26.9,36.5,91.4,100,17.3,49.2,12.5,93.2,48.7
+183,193,Curtin University,AU,Australia,-31.7807896448025,115.856343546472,Perth,WA,L,CO,VH,3,A,32.4,31.8,14.3,86.2,100,26.4,84.9,25.7,50.6,47.8
+189,222,Queensland University of Technology (QUT),AU,Australia,-27.4742757135476,153.025241845215,Brisbane,QLD,XL,CO,VH,3,A,40.9,37.6,7.4,64.9,96,26.4,68.8,16.8,90.6,46.8
+233,266,Deakin University,AU,Australia,-37.8437473907972,145.116033924217,Melbourne,VIC,XL,FC,VH,3,A,29.6,25.8,4.8,67.4,96.7,59.9,51.4,26.2,54.3,41.3
+242,316,La Trobe University,AU,Australia,-37.7127293354506,145.048778110872,Melbourne,VIC,L,CO,VH,4,A,22.6,20.2,6.9,77.5,94.4,98.4,45.8,14.3,28.9,40.3
+243,300,Griffith University,AU,Australia,-27.5525214965073,153.050993444164,Brisbane,QLD,XL,FC,VH,4,A,26.5,16.2,7.5,65.8,100,31.7,72.7,15.5,93.3,40.1
+285,296,Swinburne University of Technology,AU,Australia,-37.8199218784483,145.038591812225,Melbourne,VIC,L,CO,VH,3,A,13.4,12,11,89.5,97.9,65.5,23.9,10.8,25.8,36.1
+307,293,University of Tasmania,AU,Australia,-42.7652250271264,147.322542319254,Hobart,TAS,M,CO,VH,5,A,17.2,7.8,17.7,58.1,75.1,95.8,48.8,14.8,47.2,33.9
+326,363,University of South Australia,AU,Australia,-34.7335652270944,138.580344353451,Adelaide,SA,L,CO,VH,3,A,22.5,14,22.4,32.8,99.8,45.1,58.6,15.4,81.7,32.7
+375,510, Western Sydney University,AU,Australia,-33.1177838690039,151.128203215673,Milperra,NSW,XL,FC,HI,3,A,18.4,15,4.5,29.5,100,39.2,68.3,10.3,90.4,29.5
+380,425,Flinders University,AU,Australia,-34.5219004364576,138.440430222287,Adelaide,SA,L,FC,VH,4,A,13.3,6.7,6.5,42.6,97,89.5,38.9,10.5,64.8,29.2
+410,700,University of Southern Queensland ,AU,Australia,-27.5008848690710,151.906416508213,Toowoomba,QLD,M,CO,VH,3,A,8.5,6.8,4.5,59.6,76.1,26.3,60.6,12,51.2,27.2
+415,461,James Cook University,AU,Australia,-17.0671200197337,147.230551257703,Townsville,QLD,M,FC,VH,4,A,15.4,8.7,14.1,51.1,42,13.5,42.5,9,83.3,27
+421,520,University of Canberra ,AU,Australia,-35.2380687246013,149.083866398571,Bruce,ACT,M,CO,VH,3,A,13.7,7.3,2.3,51.7,87,58.9,8.9,9.8,55.2,26.7
+431,570,Murdoch University,AU,Australia,-32.0670553765727,115.835193376437,Murdoch,WA,M,CO,VH,3,A,7.3,5.3,5.4,53.1,86.3,76.6,40.1,14.2,23.7,26.2
+529,650,Edith Cowan University ,AU,Australia,-31.7521774895385,115.772936540767,Joondalup,WA,L,CO,VH,3,A,8.7,8.1,6.2,41,77.5,72.6,18.7,12,11.7,22.2
+567,481,Bond University,AU,Australia,-28.0100046113556,153.472505576834,Gold Coast,QLD,S,FO,VH,3,B,4.7,5.2,44.1,22.8,87.7,93.6,1.1,11.7,1.1,20.8
+590,700,Central Queensland University (CQUniversity Australia),AU,Australia,-23.3256398573292,150.519112127303,Norman Gardens,QLD,S,CO,VH,3,A,8.7,9.5,24,16,98,98.1,1.2,8.3,5.6,20.1
+610,750,Charles Darwin University ,AU,Australia,-12.3716699175658,130.868917240267,Casuarina,NT,M,CO,VH,2,A,5.8,4.7,4,41.3,37.4,76.7,3.6,8.5,45.3,-
+660,750,Southern Cross University ,AU,Australia,-28.8192152754021,153.299484525321,Lismore,NSW,M,CO,VH,2,A,4.7,3.4,3.2,38.6,71.2,66.2,9.3,6.9,11,-
+720,750,Victoria University ,AU,Australia,-37.7874996093765,144.899463928636,Melbourne,VIC,L,CO,HI,3,A,7.6,6.5,2.4,34.6,34.1,57.6,15,12.3,4.1,-
+850,1000,Australian Catholic University,AU,Australia,-37.8072414399265,144.977624481482,Melbourne,VIC,L,CO,VH,3,A,8.3,10.5,4.7,13.5,70.2,43.2,3.2,8.1,4.7,-
+850,1000,Charles Sturt University ,AU,Australia,-33.4297697806438,149.565934823635,Bathurst,NSW,L,CO,VH,3,A,5,6,7,8.6,31.7,74,10.5,10.3,53.4,-
+1000,1000,University of New England Australia,AU,Australia,-30.4897315888695,151.641094998393,Armidale,NSW,L,CO,VH,3,A,10.9,6.3,2.3,25.4,2.9,5.5,8.1,9.1,14.5,-
+1200,1200,University of the Sunshine Coast ,AU,Australia,-26.6367841820038,153.094200293114,Sippy Downs,QLD,L,CO,HI,3,A,3,2.2,2.3,22.8,2.9,18.5,6.4,6.1,7.1,-
+1401,1400,"The University of Notre Dame, Australia",AU,Australia,-33.8521920230588,151.193888039247,Chippendale,NSW,M,FO,VH,3,B,3.2,4.2,3.1,7.6,2.9,1.5,1,6.2,1,-
