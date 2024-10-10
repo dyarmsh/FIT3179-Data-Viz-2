@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Parallel coordinates plot for the top 10 Australian universities based on several scores.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Week-9-Homework/main/num_universities.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"filter": "datum['Country'] == 'Australia'"},
+      {"window": [{"op": "rank", "as": "Rank"}], "sort": [{"field": "Rank", "order": "ascending"}]},
+      {"filter": "datum['Rank'] <= 10"},
+      {"window": [{"op": "row_number", "as": "index"}]},
+      {"fold": [
+        "Academic Reputation Score",
+        "Employer Reputation Score",
+        "Faculty Student Score",
+        "Citations per Faculty Score",
+        "International Faculty Score",
+        "International Students Score",
+        "Employment Outcomes Score"
+      ]},
+      {
+        "calculate": "toNumber(datum.value)",
+        "as": "value"
+      },
+      {
+        "joinaggregate": [
+          {"op": "min", "field": "value", "as": "min"},
+          {"op": "max", "field": "value", "as": "max"}
+        ],
+        "groupby": ["key"]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max - datum.min)",
+        "as": "norm_val"
+      }
+    ],
+    "layer": [{
+      "mark": {"type": "rule", "color": "#ccc"},
+      "encoding": {
+        "detail": {"aggregate": "count"},
+        "x": {"field": "key"}
+      }
+    }, {
+      "mark": "line",
+      "encoding": {
+        "color": {"type": "nominal", "field": "Institution Name"},
+        "detail": {"type": "nominal", "field": "index"},
+        "opacity": {"value": 0.5},
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"type": "quantitative", "field": "norm_val", "axis": null},
+        "tooltip": [
+          {"field": "Institution Name", "type": "nominal"},
+          {"field": "Academic Reputation Score", "type": "quantitative"},
+          {"field": "Employer Reputation Score", "type": "quantitative"},
+          {"field": "Faculty Student Score", "type": "quantitative"},
+          {"field": "Citations per Faculty Score", "type": "quantitative"},
+          {"field": "International Faculty Score", "type": "quantitative"},
+          {"field": "International Students Score", "type": "quantitative"},
+          {"field": "Employment Outcomes Score", "type": "quantitative"}
+        ]
+      }
+    }]
+  }
+  
