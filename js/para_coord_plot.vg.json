@@ -34,7 +34,7 @@
         "x": {
           "field": "key",
           "axis": {
-            "labelAngle": 45
+            "labelAngle": 50
           }
         }
       }

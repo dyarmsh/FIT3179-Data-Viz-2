@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv"
+    },
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "aggregate": "count",
+            "field": "State",
+            "title": "Number of Universities"
+        },
+        "y": {
+            "field": "SIZE",
+            "title": "University Size"
+        },
+        "color": {
+            "field": "State",
+            "type": "nominal",
+            "scale": {"scheme": "category10"}            
+        },
+        "tooltip": [
+            {
+                "field": "State",
+                "type": "nominal",
+                "title": "State"
+            },
+            {
+                "aggregate": "count",
+                "field": "SIZE",
+                "type": "quantitative",
+                "title": "Number of Universities"
+            }
+        ]
+    }
+}
