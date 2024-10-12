@@ -33,7 +33,7 @@
     <div class="section">
         <h3>Focus on Australia</h3>
         <div class="chart" id="australia_map"> <!-- Placeholder for Australia map -->
-            <div class="placeholder">Australia Map Placeholder</div>
+            <div class="chart" id="dot_map"></div>
         </div>
     </div>
 
@@ -80,7 +80,11 @@
             console.log("Parallel Coordinates plot rendered successfully");
         }).catch(console.error);
 
-        // Add additional rendering scripts for other charts as needed
+        // Load and render the parallel coordinates plot
+        var dotMap = "js/dot_map_aus.vg.json"; // Ensure this file is correctly formatted and accessible
+        vegaEmbed('#dot_map', dotMap).then(function(result) {
+            console.log("Dot map rendered successfully");
+        }).catch(console.error);
     </script>
 </body>
 </html>

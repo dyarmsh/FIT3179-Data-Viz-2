@@ -1,0 +1,93 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "config": {
+      "legend": {
+        "labelFontSize": 12,
+        "titleFontSize": 14,
+        "titleFontWeight": "bold",
+        "symbolSize": 150,
+        "padding": 10
+      }
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/js/aus_states.topojson?token=GHSAT0AAAAAACT7G3IVDEPM57AA2QU4DAW6ZYKAQQA",
+          "format": {
+            "type": "topojson",
+            "feature": "austates"
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "#f0f0f0",
+          "stroke": "#e0e0e0",
+          "strokeWidth": 1.5
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv?token=GHSAT0AAAAAACT7G3IUWLHZILQQBN6NB4OAZYKAA7A",
+          "format": {
+            "type": "csv"
+          }
+        },
+        "mark": {
+          "type": "circle",
+          "opacity": 0.8
+        },
+        "encoding": {
+          "longitude": {
+            "field": "Longitude",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "Latitude",
+            "type": "quantitative"
+          },
+          "size": {
+            "value": 100
+          },
+          "color": {
+            "field": "State",
+            "type": "nominal",
+            "scale": {
+              "scheme": "category20"
+            },
+            "legend": {
+              "title": "State",
+              "orient": "left",
+              "titleFontSize": 14,
+              "labelFontSize": 12,
+              "symbolSize": 150
+            }
+          },
+          "tooltip": [
+            {
+              "field": "Institution Name",
+              "type": "nominal",
+              "title": "University"
+            },
+            {
+              "field": "State",
+              "type": "nominal",
+              "title": "State"
+            },
+            {
+              "field": "City",
+              "type": "nominal",
+              "title": "City"
+            },
+            {
+              "field": "2024 RANK",
+              "type": "quantitative",
+              "title": "2024 Rank"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
