@@ -33,7 +33,7 @@
     <div class="section">
         <h3>Focus on Australia</h3>
         <div class="chart" id="australia_map"> <!-- Placeholder for Australia map -->
-            <div class="chart" id="dot_map"></div>
+            <div class="chart" id="interactive_dot_stack_map"></div>
         </div>
     </div>
 
@@ -81,8 +81,8 @@
         }).catch(console.error);
 
         // Load and render the parallel coordinates plot
-        var dotMap = "js/dot_map_aus.vg.json"; // Ensure this file is correctly formatted and accessible
-        vegaEmbed('#dot_map', dotMap).then(function(result) {
+        var interactiveDotStackMap = "js/interactive_dot_stack.vg.json"; // Ensure this file is correctly formatted and accessible
+        vegaEmbed('#interactive_dot_stack_map', interactiveDotStackMap).then(function(result) {
             console.log("Dot map rendered successfully");
         }).catch(console.error);
     </script>
