@@ -106,13 +106,6 @@
         },
         "tooltip": [
           {"field": "Institution Name", "type": "nominal"},
-          {"field": "Academic Reputation Score", "type": "quantitative"},
-          {"field": "Employer Reputation Score", "type": "quantitative"},
-          {"field": "Faculty Student Score", "type": "quantitative"},
-          {"field": "Citations per Faculty Score", "type": "quantitative"},
-          {"field": "International Faculty Score", "type": "quantitative"},
-          {"field": "International Students Score", "type": "quantitative"},
-          {"field": "Employment Outcomes Score", "type": "quantitative"},
           {
             "field": "Australian Rank",
             "type": "quantitative",
@@ -122,7 +115,14 @@
             "field": "2024 RANK",
             "type": "quantitative",
             "title": "2024 Global Rank"
-          }
+          },
+          {"field": "Academic Reputation Score", "type": "quantitative"},
+          {"field": "Employer Reputation Score", "type": "quantitative"},
+          {"field": "Faculty Student Score", "type": "quantitative"},
+          {"field": "Citations per Faculty Score", "type": "quantitative"},
+          {"field": "International Faculty Score", "type": "quantitative"},
+          {"field": "International Students Score", "type": "quantitative"},
+          {"field": "Employment Outcomes Score", "type": "quantitative"}
         ]
       }
     }
