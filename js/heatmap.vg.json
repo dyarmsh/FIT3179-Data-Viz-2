@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv"
+    },
+    "mark": "rect",
+    "width": 300,
+    "height": 200,
+    "encoding": {
+      "x": {
+        "field": "AGE",
+        "type": "ordinal",
+        "title": "University Age"
+      },
+      "y": {
+        "field": "SIZE",
+        "type": "ordinal",
+        "title": "University Size"
+      },
+      "color": {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Number of Universities",
+        "scale": {
+          "domainMin": 0,
+          "domainMax": 10,
+          "range": ["#f7f7f7", "#ffffbf", "#fee08b", "#fdae61", "#f46d43", "#d53e4f"],
+          "type": "linear"
+        }
+      },
+      "tooltip": [
+        {"aggregate": "count", "type": "quantitative", "title": "Number of Universities"},
+        {"field": "AGE", "type": "ordinal", "title": "Age Category"},
+        {"field": "SIZE", "type": "ordinal", "title": "Size Category"}
+      ]
+    },
+    "config": {
+      "view": {
+        "stroke": "transparent"
+      }
+    }
+  }
