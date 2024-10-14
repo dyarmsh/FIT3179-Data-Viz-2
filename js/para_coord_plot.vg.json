@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Parallel coordinates plot for the top 10 Australian universities based on several scores.",
-  "width": 600,
+  "width": 400,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv",
@@ -47,7 +47,13 @@
       "encoding": {
         "color": {"type": "nominal", "field": "Institution Name"},
         "detail": {"type": "nominal", "field": "index"},
-        "opacity": {"value": 1},
+        "opacity": {
+          "condition": {
+            "param": "click",
+            "value": 1
+          },
+          "value": 0.1
+        },
         "x": {
           "type": "nominal",
           "field": "key",
@@ -75,6 +81,13 @@
           {"field": "International Students Score", "type": "quantitative"},
           {"field": "Employment Outcomes Score", "type": "quantitative"}
         ]
+      },
+      "selection": {
+        "click": {
+          "type": "multi",
+          "fields": ["Institution Name"],
+          "bind": "legend"
+        }
       }
     },
     {
@@ -87,6 +100,7 @@
       },
       "encoding": {
         "color": {"type": "nominal", "field": "Institution Name"},
+        "opacity": {"value": 0.4},
         "x": {
           "type": "nominal",
           "field": "key",
@@ -115,14 +129,7 @@
             "field": "2024 RANK",
             "type": "quantitative",
             "title": "2024 Global Rank"
-          },
-          {"field": "Academic Reputation Score", "type": "quantitative"},
-          {"field": "Employer Reputation Score", "type": "quantitative"},
-          {"field": "Faculty Student Score", "type": "quantitative"},
-          {"field": "Citations per Faculty Score", "type": "quantitative"},
-          {"field": "International Faculty Score", "type": "quantitative"},
-          {"field": "International Students Score", "type": "quantitative"},
-          {"field": "Employment Outcomes Score", "type": "quantitative"}
+          }
         ]
       }
     }
