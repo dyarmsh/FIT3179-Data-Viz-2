@@ -1,6 +1,6 @@
 {
   "width": 500,
-  "height": 400,
+  "height": 500,
   "config": {
     "legend": {
       "labelFontSize": 12,
@@ -102,6 +102,14 @@
             "symbolSize": 150
           }
         },
+        "opacity": {
+          "condition": {
+            "param": "click",
+            "value": 0.8
+          },
+          "value": 0.1
+        },
+        
         "tooltip": [
           {
             "field": "Institution Name",
@@ -139,6 +147,13 @@
             "title": "Age"
           }
         ]
+      },
+      "selection": {
+        "click": {
+          "type": "multi",
+          "fields": ["State"],
+          "bind": "legend"
+        }
       }
     }
   ]
