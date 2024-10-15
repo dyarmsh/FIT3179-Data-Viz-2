@@ -24,7 +24,7 @@
         "scale": {
           "domainMin": 0,
           "domainMax": 10,
-          "range": ["#f7f7f7", "#ffffbf", "#fee08b", "#fdae61", "#f46d43", "#d53e4f"],
+          "scheme": "blues",
           "type": "linear"
         }
       },
