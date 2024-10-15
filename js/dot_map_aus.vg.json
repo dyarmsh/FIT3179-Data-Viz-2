@@ -1,5 +1,4 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 500,
   "height": 400,
   "config": {
@@ -11,6 +10,28 @@
       "padding": 10
     }
   },
+  "params": [
+    {
+      "name": "size_filter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "S", "M", "L", "XL"],
+        "labels": ["All", "Small", "Medium", "Large", "Extra Large"],
+        "name": "University Size: "
+      }
+    },
+    {
+      "name": "age_filter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "1", "2", "3", "4", "5"],
+        "labels": ["All", "1", "2", "3", "4", "5+"],
+        "name": "University Age: "
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -36,17 +57,24 @@
       },
       "transform": [
         {
+          "filter": "size_filter == 'All' || datum.SIZE == size_filter"
+        },
+        {
+          "filter": "age_filter == 'All' || (age_filter == '5' ? +datum.AGE >= 5 : datum.AGE == age_filter)"
+        },
+        {
           "window": [
             {
-              "op": "row_number",  
-              "as": "Australian Rank" 
+              "op": "row_number",
+              "as": "Australian Rank"
             }
-          ]
+          ],
+          "sort": [{"field": "2024 RANK", "order": "ascending"}]
         }
       ],
       "mark": {
         "type": "circle",
-        "opacity": 0.5
+        "opacity": 0.7
       },
       "encoding": {
         "longitude": {
@@ -93,12 +121,22 @@
           {
             "field": "Australian Rank",
             "type": "quantitative",
-            "title": "2024 Australian Rank"  
+            "title": "2024 Australian Rank"
           },
           {
             "field": "2024 RANK",
             "type": "quantitative",
             "title": "2024 Rank"
+          },
+          {
+            "field": "SIZE",
+            "type": "nominal",
+            "title": "Size"
+          },
+          {
+            "field": "AGE",
+            "type": "ordinal",
+            "title": "Age"
           }
         ]
       }
