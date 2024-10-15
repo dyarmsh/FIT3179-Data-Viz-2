@@ -7,84 +7,125 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
     <title>FIT3179 Data Viz 2</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" media="all"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 </head>
 <body>
-    <div id="header">
-        <h2>Australia's Top Universities</h2>
-        <p>38 of the top 1500 universities in the world are in Australia</p>
-    </div>
+    <div class="container">
+        <header>
+            <h1>🇦🇺 Top Universities of Australia 🇦🇺</h1>
+            <p class="subheading">How do Australian universities stand against each other?</p>
+        </header>
 
-    <div class="section">
-        <div class="flex-container">
-            <p>Australia is in the list of the top 10 countries with the most amount of top universities in the top 1500 in the world.
-                The leading country is USA, followed the UK and China.
-            </p>
-            <div class="chart" id="radial_plot"></div>
-        </div>
-    </div>
-    <div class="section">
-        <h3>Where are the top universities around the world?</h3>
-        <div class="flex-container">
-            <div class="chart" id="choropleth_map"></div>
-        </div>
-    </div>
+        <section class="overview">
+            <div class="flex-container">
+                <div class="text-content">
+                    <h2>Overview</h2>
+                    <p>Australia is in the list of the top 10 countries with the most amount of top universities in the top 1500 in the world. The leading country is USA, followed by the UK and China.</p>
+                </div>
+                <div class="chart" id="radial_plot"></div>
+            </div>
+        </section>
 
-    <div class="section">
-        <h3>Focus on Australia</h3>
-        <div class="chart" id="australia_map"> <!-- Placeholder for Australia map -->
-            <div class="chart" id="interactive_dot_stack_map"></div>
-        </div>
-    </div>
+        <section class="world-map">
+            <div class="center-heading">
+                <h2>🌏 Where are the World's Top Universities? 🌏</h2>
+                <p>Australia is in the list of the top 10 countries with the most amount of top universities in the top 1500 in the world. The leading country is USA, followed by the UK and China.</p>
+            </div>
+            <div class="chart center-chart" id="choropleth_map"></div>
+        </section>
 
-    <div class="section">
-        <h3>Analysis of Top Universities in Australia</h3>
-        <div class="flex-container">
-            <div class="chart" id="para_coord_plot"> <!-- Placeholder for Parallel Coordinates Plot -->
-                <div class="placeholder">Parallel Coordinates Plot Placeholder</div>
+        <section class="australia-focus">
+            <div class="center-heading">
+                <h4>FOCUS ON AUSTRALIA 🇦🇺</h4>
+                <h2>Where are Australia's Top Universities?</h2>
             </div>
-            <div class="chart" id="treemap"> <!-- Placeholder for Treemap by State -->
-                <div class="placeholder">Treemap by State Placeholder</div>
+            <div class="chart center-chart" id="interactive_dot_map"></div>
+            
+            <div class="flex-container">
+                <h3>University Age and Size Distribution</h3>
+                <p>Explore the distribution of Australian universities based on their age and size.</p>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="openTab(event, 'age-tab')">Age Distribution</button>
+                        <button class="tab-button" onclick="openTab(event, 'size-tab')">Size Distribution</button>
+                    </div>
+                    <div id="age-tab" class="tab-content active">
+                        <div class="chart" id="age_stack_bar"></div>
+                    </div>
+                    <div id="size-tab" class="tab-content">
+                        <div class="chart" id="size_stack_bar"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="section">
-        <h3>Additional Visualizations</h3>
-        <div class="flex-container">
-            <div class="chart" id="isotype"> <!-- Placeholder for Isotype -->
-                <div class="placeholder">Isotype Placeholder</div>
+            <div class="flex-container">
+                <div class="text-content">
+                    <h3>Is there a correlation between Age and Size?</h3>
+                    <p>Explore the relationship between the age and size of Australian universities in this heatmap visualization.</p>
+                </div>
+                <div class="chart" id="heatmap"></div>
             </div>
-            <div class="chart" id="stack_bar"> <!-- Placeholder for Stack Bar Chart -->
-                <div class="placeholder">Stack Bar Chart Placeholder</div>
+
+            <div class="flex-container">
+                <h3>Comparing Multiple Attributes</h3>
+                <div class="chart" id="para_coord_plot"></div>
             </div>
-        </div>
+        </section>
+
+        <footer>
+            <p class="subheading">Created by Diya Ramesh for FIT3179 Data Visualisation</p>
+        </footer>
     </div>
 
     <script type="text/javascript">
-        // Load and render the choropleth map
-        var map = "js/choropleth_map.vg.json";
-        vegaEmbed('#choropleth_map', map).then(function(result) {
+        var choroplethWorldMap = "js/choropleth_map.vg.json";
+        vegaEmbed('#choropleth_map', choroplethWorldMap).then(function(result) {
             console.log("Choropleth map rendered successfully");
         }).catch(console.error);
         
-        // Load and render the radial plot
-        var radialPlot = "js/radial_plot.vg.json"; // Ensure this file is correctly formatted and accessible
+        var radialPlot = "js/radial_plot.vg.json";
         vegaEmbed('#radial_plot', radialPlot).then(function(result) {
             console.log("Radial plot rendered successfully");
         }).catch(console.error);
 
-        // Load and render the parallel coordinates plot
-        var parallelCoordPlot = "js/para_coord_plot.vg.json"; // Ensure this file is correctly formatted and accessible
+        var parallelCoordPlot = "js/para_coord_plot.vg.json";
         vegaEmbed('#para_coord_plot', parallelCoordPlot).then(function(result) {
             console.log("Parallel Coordinates plot rendered successfully");
         }).catch(console.error);
 
-        // Load and render the parallel coordinates plot
-        var interactiveDotStackMap = "js/interactive_dot_stack.vg.json"; // Ensure this file is correctly formatted and accessible
-        vegaEmbed('#interactive_dot_stack_map', interactiveDotStackMap).then(function(result) {
-            console.log("Dot map rendered successfully");
+        var ageStackBarPlot = "js/age_grouped_bar.vg.json";
+        vegaEmbed('#age_stack_bar', ageStackBarPlot).then(function(result) {
+            console.log("Age stack bar plot rendered successfully");
         }).catch(console.error);
+
+        var sizeStackBarPlot = "js/size_grouped_bar.vg.json";
+        vegaEmbed('#size_stack_bar', sizeStackBarPlot).then(function(result) {
+            console.log("Size stack bar plot rendered successfully");
+        }).catch(console.error);
+
+        var interactiveDotMap = "js/dot_map_aus.vg.json";
+        vegaEmbed('#interactive_dot_map', interactiveDotMap).then(function(result) {
+            console.log("Interactive dot map rendered successfully");
+        }).catch(console.error);
+
+        var heatMap = "js/heatmap.vg.json";
+        vegaEmbed('#heatmap', heatMap).then(function(result) {
+            console.log("Heat map rendered successfully");
+        }).catch(console.error);
+
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
     </script>
 </body>
 </html>
