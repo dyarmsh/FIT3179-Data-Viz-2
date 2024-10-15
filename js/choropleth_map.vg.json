@@ -59,7 +59,9 @@
       "title": "Number of Universities",
           "legend": {
             "orient": "right",   
-            "direction": "vertical" 
+            "direction": "vertical",
+            "titleFontSize": 14,
+            "labelFontSize": 12
           }
     },
     "tooltip": [

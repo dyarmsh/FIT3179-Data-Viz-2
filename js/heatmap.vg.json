@@ -10,13 +10,21 @@
       "x": {
         "field": "AGE",
         "type": "ordinal",
-        "title": "University Age"
+        "title": "University Age",
+        "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 14
+          }
       },
       "y": {
         "field": "SIZE",
         "type": "ordinal",
         "title": "University Size",
-        "sort": ["XL", "L", "M", "S"]
+        "sort": ["XL", "L", "M", "S"],
+        "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 14
+          }
       },
       "color": {
         "aggregate": "count",
@@ -25,7 +33,7 @@
         "scale": {
           "domainMin": 0,
           "domainMax": 10,
-          "scheme": "yellowgreenblue",
+          "scheme": "yelloworangered",
           "type": "linear"
         }
       },

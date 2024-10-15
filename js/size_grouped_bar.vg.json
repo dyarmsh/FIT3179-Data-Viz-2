@@ -16,12 +16,20 @@
     "encoding": {
         "x": {
             "field": "State",
-            "type": "nominal"
+            "type": "nominal",
+            "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 14
+          }
         },
         "y": {
             "aggregate": "count",
             "field": "State",
-            "title": "Number of Universities"
+            "title": "Number of Universities",
+            "axis": {
+            "labelFontSize": 12,
+            "titleFontSize": 14
+          }
         },
         "xOffset": {
             "field": "SIZE",

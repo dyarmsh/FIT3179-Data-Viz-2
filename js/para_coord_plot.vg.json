@@ -77,9 +77,11 @@
           "type": "nominal", 
           "field": "Institution Name",
           "legend": {
-                "title": "Top Universities in Australia",
+                "title": "Top Australian Universities",
                 "orient": "right",
-                "direction": "vertical"
+                "direction": "vertical",
+                "titleFontSize": 14,
+                "labelFontSize": 12
             }
         },
         "detail": {"type": "nominal", "field": "index"},

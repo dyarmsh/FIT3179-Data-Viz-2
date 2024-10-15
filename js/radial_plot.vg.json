@@ -44,7 +44,9 @@
           "type": "nominal",
           "legend": {
             "title": "Country",
-            "orient": "right"
+            "orient": "right",
+            "titleFontSize": 14,
+            "labelFontSize": 12
           }
         },
         "order": {
