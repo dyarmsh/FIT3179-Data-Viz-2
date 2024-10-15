@@ -108,12 +108,14 @@ section {
 .chart {
     background-color: #fff;
     border-radius: 8px;
+    max-width: 800px; /* Optional: Set a maximum width to prevent it from stretching too much */
+    margin: 0 auto; /* Center the chart */
 }
 
 .center-chart {
     text-align: center;
-    margin: 0 auto;
-    display: block;
+    margin: 0 auto; /* Center the chart */
+    display: block; /* Ensure it's a block element */
 }
 
 /* Tab Styles */
