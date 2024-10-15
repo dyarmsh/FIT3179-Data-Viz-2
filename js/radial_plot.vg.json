@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A radial plot showing the top 10 countries with the most universities, arranged by size, with a legend for the countries and interactivity.",
+  "width": 300,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Week-9-Homework/main/num_universities.csv",
     "format": {"type": "csv"}
@@ -50,10 +52,24 @@
           "type": "quantitative",
           "sort": "descending"
         },
+        "opacity": {
+          "condition": {
+            "param": "click",
+            "value": 1
+          },
+          "value": 0.1
+        },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
           {"field": "TotalUniversities", "type": "quantitative", "title": "Number of Universities"}
         ]
+      },
+      "selection": {
+        "click": {
+          "type": "multi",
+          "fields": ["Country"],
+          "bind": "legend"
+        }
       }
     },
     {
