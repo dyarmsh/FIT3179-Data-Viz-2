@@ -56,6 +56,10 @@ p {
     margin-bottom: 15px;
 }
 
+.emphasise {
+    font-size: 24px;
+}
+
 .subheading {
     color: white;
     font-size: 18px;
