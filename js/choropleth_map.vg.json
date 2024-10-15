@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1000,
+  "width": 950,
   "height": 600,
   "projection": {"type": "equalEarth"},
   "data": {
@@ -58,8 +58,8 @@
       },
       "title": "Number of Universities",
           "legend": {
-            "orient": "bottom",   
-            "direction": "horizontal" 
+            "orient": "right",   
+            "direction": "vertical" 
           }
     },
     "tooltip": [
