@@ -1,25 +1,53 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 400,
+    "width": 800,
+    "height": 200,
     "data": {
         "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv"
+    },
+    "selection": {
+        "click": {
+            "type": "multi",
+            "fields": ["SIZE"],
+            "bind": "legend"
+        }
     },
     "mark": "bar",
     "encoding": {
         "x": {
+            "field": "State",
+            "type": "nominal"
+        },
+        "y": {
             "aggregate": "count",
             "field": "State",
             "title": "Number of Universities"
         },
-        "y": {
+        "xOffset": {
             "field": "SIZE",
-            "title": "University Size"
+            "title": "University Size",
+            "sort": ["S", "M", "L", "XL"]
         },
         "color": {
-            "field": "State",
-            "type": "nominal",
-            "scale": {"scheme": "category10"}            
+            "field": "SIZE",
+            "title": "University Size",
+            "scale": {"scheme": "category10"},
+            "sort": ["S", "M", "L", "XL"],
+            "legend": {
+                "title": "University Size",
+                "orient": "right",
+                "direction": "vertical",
+                "titleFontSize": 14,
+                "labelFontSize": 12,
+                "symbolSize": 150
+            }
+        },
+        "opacity": {
+          "condition": {
+            "param": "click",
+            "value": 1
+          },
+          "value": 0.1
         },
         "tooltip": [
             {
