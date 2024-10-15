@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Parallel coordinates plot for the top Australian universities based on several scores.",
   "width": 800,
-  "height": 400,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv",
     "format": {"type": "csv"}
@@ -35,7 +35,7 @@
       "Employment Outcomes Score",
       "International Research Network Score",
       "Sustainability Score",
-      "Overall SCORE"
+      "Overall Score"
     ]},
     {
       "calculate": "toNumber(datum.value)", 
@@ -59,7 +59,7 @@
             "Employment Outcomes Score",
             "International Research Network Score",
             "Sustainability Score",
-            "Overall SCORE"
+            "Overall Score"
           ],
           "axis": {
             "labelAngle": 50
@@ -103,10 +103,13 @@
             "Employment Outcomes Score",
             "International Research Network Score",
             "Sustainability Score",
-            "Overall SCORE"
+            "Overall Score"
           ],
           "axis": {
-            "labelAngle": 0               
+            "labelAngle": 0,
+            "labelFontSize": 12,
+            "title": null,
+            "labelPadding": 10
           }
         },
         "y": {
@@ -129,7 +132,7 @@
           {"field": "Employment Outcomes Score", "type": "quantitative"},
           {"field": "International Research Network Score", "type": "quantitative"},
           {"field": "Sustainability Score", "type": "quantitative"},
-          {"field": "Overall SCORE", "type": "quantitative"}
+          {"field": "Overall Score", "type": "quantitative"}
         ]
       },
       "selection": {
@@ -164,7 +167,7 @@
             "Employment Outcomes Score",
             "International Research Network Score",
             "Sustainability Score",
-            "Overall SCORE"
+            "Overall Score"
           ],
           "axis": {
             "labelAngle": 0     
@@ -201,7 +204,7 @@
           {"field": "Employment Outcomes Score", "type": "quantitative"},
           {"field": "International Research Network Score", "type": "quantitative"},
           {"field": "Sustainability Score", "type": "quantitative"},
-          {"field": "Overall SCORE", "type": "quantitative"}
+          {"field": "Overall Score", "type": "quantitative"}
         ]
       }
     }
