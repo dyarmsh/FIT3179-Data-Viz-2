@@ -8,11 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
     <title>FIT3179 Data Viz 2</title>
     <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🇦🇺 Top Universities of Australia 🇦🇺</h1>
+            <h1>🇦🇺 <strong>Top</strong> Universities of Australia 🇦🇺</h1>
             <p class="subheading">How do Australian universities stand against each other?</p>
         </header>
 
@@ -20,16 +24,16 @@
             <div class="flex-container">
                 <div class="text-content">
                     <h2>Overview</h2>
+                    <div class="available-interactions">
+                        <ul>
+                            <li><strong>Click on Country in legend:</strong> Click on specific countries in the legend to highlight the country.</li>                    
+                        </ul>
+                    </div>
                     <p><strong class="emphasise">45%</strong> of the world's top unviersities are in <strong class="emphasise">10</strong> countries.</p>
                     <p>
                         Australia just makes the top 10, coming in at <strong>10th</strong> place with <strong>38</strong> out of <strong>1,500</strong> of the top universities
                         in the world. 
 
-                        The United States of America is on top of the table by a significant margin of 199 universities - roughly double the number of top universities in the United Kingdom
-                        which makes 2nd place with 99 top universities.
-                    </p>
-
-                    <p>
                         The United States of America is on top of the table by a significant margin of 199 universities - roughly double the number of top universities in the United Kingdom
                         which makes 2nd place with 99 top universities.
                     </p>
@@ -40,22 +44,73 @@
 
         <section class="world-map">
             <div class="center-heading">
-                <h2>🌏 Where are the World's Top Universities? 🌏</h2>
-                <p>Australia is in the list of the top 10 countries with the most amount of top universities in the top 1500 in the world. The leading country is USA, followed by the UK and China.</p>
+                <h2>🌏 Where are the World's <strong>Top</strong> Universities? 🌏</h2>
+                <p>Australia proudly ranks among the top 10 countries with the highest number of top universities. 
+                   The global education landscape is dominated by the USA, followed by the UK and China, reflecting diverse academic excellence and cultural richness.</p>
+            </div>
+            <div class="available-interactions">
+                <ul>
+                    <li><strong>Hover over countries on the map:</strong> Hover over counties on the map to see how many top universities are in each country.</li>
+                </ul>
             </div>
             <div class="chart center-chart" id="choropleth_map"></div>
         </section>
 
         <section class="australia-focus">
-            <div class="center-heading">
-                <h4>FOCUS ON AUSTRALIA 🇦🇺</h4>
-                <h2>Where are Australia's Top Universities?</h2>
+            <div class="aus-focus-section">
+                <div class="center-heading">
+                    <h4>FOCUS ON AUSTRALIA 🇦🇺</h4>
+                    <h2>Where are Australia's <strong>Top</strong> Universities?</h2>
+                    <p>Delve into the characteristics of Australian universities by examining their age and size distribution. 
+                        Understanding these dimensions can provide insights into the evolution of higher education in Australia.</p>
+                </div>
+                
+                    <div class="available-interactions">
+                        <ul>
+                            <li><strong>Hover over points on the map:</strong> Hover over dots on the map to see information about each university.</li>
+                            <li><strong>Click on State in legend:</strong> Click on specific states in the legend to filter the universities for that specific state.</li>
+                            <li><strong>Filter by Age and Size:</strong> Apply filters to explore specific segments of the data.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="collapsible-container">
+                        <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Size Categories ▾</h3>
+                        <div class="collapsible-content">
+                            <div class="category">
+                                <p><strong>XL</strong> - Extra Large: More than 30,000 Students</p>
+                                <p><strong>L</strong> - Large: >= 12,000 Students</p>
+                                <p><strong>M</strong> - Medium: >= 5,000 Students</p>
+                                <p><strong>S</strong> - Small: Fewer than 5,000 Students</p>
+                            </div>
+                        </div>
+                    
+                        <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Classification by Age ▾</h3>
+                        <div class="collapsible-content">
+                            <div class="classification">
+                                <p><strong>5</strong> - Historic: 100 years old and more</p>
+                                <p><strong>4</strong> - Mature: 50-99 years old</p>
+                                <p><strong>3</strong> - Established: 25-49 years old</p>
+                                <p><strong>2</strong> - Young: 10-24 years old</p>
+                                <p><strong>1</strong> - New: Less than 10 years old</p>
+                            </div>
+                        </div>
+                        <p>The classification for Age and Size are derived from QS Universities <a href="https://support.qs.com/hc/en-gb/articles/360021876820-QS-Institution-Classifications">here</a></p>
+                    </div>
+                    
+                    <div class="chart center-chart" id="interactive_dot_map"></div>
             </div>
-            <div class="chart center-chart" id="interactive_dot_map"></div>
             
-            <div class="flex-container">
+            <div class="aus-focus-section">
                 <h3>University Age and Size Distribution</h3>
-                <p>Explore the distribution of Australian universities based on their age and size.</p>
+                <p>Delve into the characteristics of Australian universities by examining their age and size distribution. 
+                   Understanding these dimensions can provide insights into the evolution of higher education in Australia.</p>
+
+                <div class="available-interactions">
+                    <ul>
+                        <li><strong>Click on attribute in legend:</strong> Click on the attribute in the legend to highlight those bars in the plot</li>                    
+                    </ul>
+                </div>
+
                 <div class="tab-container">
                     <div class="tab-buttons">
                         <button class="tab-button active" onclick="openTab(event, 'age-tab')">Universities by Age</button>
@@ -70,22 +125,43 @@
                 </div>
             </div>
 
-            <div class="flex-container">
-                <div class="text-content">
-                    <h3>Is there a correlation between Age and Size?</h3>
-                    <p>Explore the relationship between the age and size of Australian universities in this heatmap visualization.</p>
+            <div class="aus-focus-section">
+                <div class="flex-container">
+                    <div class="text-content">
+                        <h3>Is there a correlation between Age and Size?</h3>
+
+                        <div class="available-interactions">
+                            <ul>
+                                <li><strong>Hover over square:</strong> View more details on how many universities coresspond to the combinations of Age and Size.</li>                    
+                            </ul>
+                        </div>
+
+                        <p>Investigate the interplay between university age and size through this heatmap visualization. 
+                        Understanding this relationship can help stakeholders make informed decisions about university development and resource allocation.</p>
+                    </div>
+                    <div class="chart" id="heatmap"></div>
                 </div>
-                <div class="chart" id="heatmap"></div>
             </div>
 
-            <div class="flex-container">
+            <div class="aus-focus-section">
                 <h3>Comparing Multiple Attributes</h3>
+
+                <div class="available-interactions">
+                    <ul>
+                        <li><strong>Hover over points:</strong> View more details on the university's individual scores.</li>   
+                        <li><strong>Use the slider to filter the top N universities :</strong> Filter the data to as many top universities as you wish.</li>                                     
+                    </ul>
+                </div>
+
+                <p>In this section, we explore the comparative analysis of various attributes of Australian universities. 
+                This multi-dimensional perspective reveals the complex nature of higher education institutions and their standings.</p>
                 <div class="chart center-chart" id="para_coord_plot"></div>
             </div>
+            
         </section>
 
         <footer>
-            <p class="subheading">Created by Diya Ramesh for FIT3179 Data Visualisation</p>
+            <p class="subheading">Created by Diya Ramesh. Data from QS University Rankings, retrieved here.</p>
         </footer>
     </div>
 
@@ -138,6 +214,17 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
+
+        function toggleCollapse(event) {
+        const content = event.target.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none"; // Collapse the section
+            event.target.innerHTML = event.target.innerHTML.replace('&#x25B2;', '&#x25BC;'); // Change icon to down
+        } else {
+            content.style.display = "block"; // Expand the section
+            event.target.innerHTML = event.target.innerHTML.replace('&#x25BC;', '&#x25B2;'); // Change icon to up
+        }
+    }
     </script>
 </body>
 </html>

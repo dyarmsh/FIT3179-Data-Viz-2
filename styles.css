@@ -1,6 +1,9 @@
 /* Global Styles */
+* {
+    font-family: 'Nunito';
+}
+
 body {
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
@@ -66,6 +69,10 @@ p {
     margin: 0px;
 }
 
+strong {
+    font-weight: 800;
+}
+
 /* Section Styles */
 section {
     background-color: #fff;
@@ -94,7 +101,7 @@ section {
 .australia-focus {
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 32px;
 }
 
 /* Chart Styles */
@@ -104,6 +111,7 @@ section {
 }
 
 .center-chart {
+    text-align: center;
     margin: 0 auto;
     display: block;
 }
@@ -183,4 +191,64 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+.available-interactions {
+    background-color: #f2f8ff; /* Light background for contrast */
+    border-radius: 12px; /* Rounded corners */
+    padding: 8px; /* Spacing inside the section */
+    margin: 8px 0; /* Spacing outside the section */
+}
+
+.available-interactions h4 {
+    color: #003366; /* Consistent heading color */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.available-interactions ul {
+    list-style-type: "▸ ";
+    padding: 0px 16px; /* Remove default padding */
+}
+
+.available-interactions li {
+    margin-bottom: 10px; /* Space between items */
+    color: darkslategray; /* Text color for readability */
+}
+
+.available-interactions strong {
+    color: #003366; /* Strong emphasis on interaction types */
+}
+
+.collapsible-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Smaller rounded corners */
+    margin: 20px 0; /* Spacing outside the section */
+    padding: 10px; /* Smaller padding */
+}
+
+.collapsible-header {
+    background-color: #003366; /* Header background color */
+    color: #ffffff; /* Header text color */
+    cursor: pointer; /* Pointer cursor for clickable headers */
+    padding: 10px; /* Reduced padding */
+    margin: 0; /* Remove default margin */
+    border-radius: 6px; /* Smaller rounded corners for header */
+    transition: background-color 0.3s; /* Smooth background transition */
+    font-size: 18px; /* Smaller font size */
+}
+
+.collapsible-content {
+    display: none; /* Hide content by default */
+    padding: 10px; /* Reduced padding inside content area */
+    background-color: #ffffff; /* White background for content area */
+    border: 1px solid #003366; /* Border for content area */
+    border-radius: 6px; /* Smaller rounded corners for content area */
+}
+
+.collapsible-content p {
+    margin: 5px 0; /* Less space between paragraphs */
+    font-size: 14px; /* Smaller font size for paragraphs */
 }

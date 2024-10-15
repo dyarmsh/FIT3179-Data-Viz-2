@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Parallel coordinates plot for the top Australian universities based on several scores.",
   "width": 800,
-  "height": 500,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv",
     "format": {"type": "csv"}
