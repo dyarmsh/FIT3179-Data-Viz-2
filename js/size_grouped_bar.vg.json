@@ -31,7 +31,7 @@
         "color": {
             "field": "SIZE",
             "title": "University Size",
-            "scale": {"scheme": "category10"},
+            "scale": {"scheme": "goldgreen"},
             "sort": ["S", "M", "L", "XL"],
             "legend": {
                 "title": "Filter by University Size",

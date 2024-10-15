@@ -73,6 +73,14 @@ strong {
     font-weight: 800;
 }
 
+.age {
+    color: #db3b28;
+}
+
+.size {
+    color: #439350;
+}
+
 /* Section Styles */
 section {
     background-color: #fff;
@@ -101,7 +109,7 @@ section {
 .australia-focus {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 48px;
 }
 
 /* Chart Styles */
@@ -166,9 +174,17 @@ footer {
     text-align: center;
     padding: 40px 0;
     background-color: #003366;
-    color: #fff;
+    color: lightgray;
     border-radius: 12px;
+    font-size: 6px;
 }
+
+footer a {
+    color: lightblue
+}
+a {
+    color: #003366;
+  }
 
 /* Responsive Design */
 @media (max-width: 768px) {

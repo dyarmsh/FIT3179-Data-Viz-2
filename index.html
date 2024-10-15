@@ -17,7 +17,7 @@
     <div class="container">
         <header>
             <h1>🇦🇺 <strong>Top</strong> Universities of Australia 🇦🇺</h1>
-            <p class="subheading">How do Australian universities stand against each other?</p>
+            <p class="subheading">38 of the world's top universities are in Australia, which is becoming an increasingly popular destination to study at.</p>
         </header>
 
         <section class="overview">
@@ -50,7 +50,7 @@
             </div>
             <div class="available-interactions">
                 <ul>
-                    <li><strong>Hover over countries on the map:</strong> Hover over counties on the map to see how many top universities are in each country.</li>
+                    <li><strong>Hover over countries on the map:</strong> Hover over countries on the map to see how many top universities are in each country.</li>
                 </ul>
             </div>
             <div class="chart center-chart" id="choropleth_map"></div>
@@ -61,49 +61,53 @@
                 <div class="center-heading">
                     <h4>FOCUS ON AUSTRALIA 🇦🇺</h4>
                     <h2>Where are Australia's <strong>Top</strong> Universities?</h2>
-                    <p>Delve into the characteristics of Australian universities by examining their age and size distribution. 
-                        Understanding these dimensions can provide insights into the evolution of higher education in Australia.</p>
+                    <p>Victoria, New South Wales and Queensland are the Australian states which house the most prestigious universities in the country. Sydney, Melbourne and Brisbane are the top student cities in the world and there are numerous top universities centered around these cities.</p>
+                </div>
+
+                <div class="collapsible-container">
+                    <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Size Categories ▾</h3>
+                    <div class="collapsible-content">
+                        <div class="category">
+                            <p><strong>XL</strong> - Extra Large: More than 30,000 Students</p>
+                            <p><strong>L</strong> - Large: >= 12,000 Students</p>
+                            <p><strong>M</strong> - Medium: >= 5,000 Students</p>
+                            <p><strong>S</strong> - Small: Fewer than 5,000 Students</p>
+                        </div>
+                    </div>
+                
+                    <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Classification by Age ▾</h3>
+                    <div class="collapsible-content">
+                        <div class="classification">
+                            <p><strong>5</strong> - Historic: 100 years old and more</p>
+                            <p><strong>4</strong> - Mature: 50-99 years old</p>
+                            <p><strong>3</strong> - Established: 25-49 years old</p>
+                            <p><strong>2</strong> - Young: 10-24 years old</p>
+                            <p><strong>1</strong> - New: Less than 10 years old</p>
+                        </div>
+                    </div>
+                    <p>The classification for Age and Size are derived from QS Universities <a href="https://support.qs.com/hc/en-gb/articles/360021876820-QS-Institution-Classifications">here</a></p>
                 </div>
                 
-                    <div class="available-interactions">
-                        <ul>
-                            <li><strong>Hover over points on the map:</strong> Hover over dots on the map to see information about each university.</li>
-                            <li><strong>Click on State in legend:</strong> Click on specific states in the legend to filter the universities for that specific state.</li>
-                            <li><strong>Filter by Age and Size:</strong> Apply filters to explore specific segments of the data.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="collapsible-container">
-                        <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Size Categories ▾</h3>
-                        <div class="collapsible-content">
-                            <div class="category">
-                                <p><strong>XL</strong> - Extra Large: More than 30,000 Students</p>
-                                <p><strong>L</strong> - Large: >= 12,000 Students</p>
-                                <p><strong>M</strong> - Medium: >= 5,000 Students</p>
-                                <p><strong>S</strong> - Small: Fewer than 5,000 Students</p>
-                            </div>
-                        </div>
-                    
-                        <h3 class="collapsible-header" onclick="toggleCollapse(event)">University Classification by Age ▾</h3>
-                        <div class="collapsible-content">
-                            <div class="classification">
-                                <p><strong>5</strong> - Historic: 100 years old and more</p>
-                                <p><strong>4</strong> - Mature: 50-99 years old</p>
-                                <p><strong>3</strong> - Established: 25-49 years old</p>
-                                <p><strong>2</strong> - Young: 10-24 years old</p>
-                                <p><strong>1</strong> - New: Less than 10 years old</p>
-                            </div>
-                        </div>
-                        <p>The classification for Age and Size are derived from QS Universities <a href="https://support.qs.com/hc/en-gb/articles/360021876820-QS-Institution-Classifications">here</a></p>
-                    </div>
+                <div class="available-interactions">
+                    <ul>
+                        <li><strong>Hover over points on the map:</strong> Hover over dots on the map to see information about each university.</li>
+                        <li><strong>Click on State in legend:</strong> Click on specific states in the legend to filter the universities for that specific state.</li>
+                        <li><strong>Filter by Age and Size:</strong> Apply filters to see universities for specific combinations of age and size. </li>
+                    </ul>
+                </div>
                     
                     <div class="chart center-chart" id="interactive_dot_map"></div>
             </div>
             
             <div class="aus-focus-section">
-                <h3>University Age and Size Distribution</h3>
-                <p>Delve into the characteristics of Australian universities by examining their age and size distribution. 
-                   Understanding these dimensions can provide insights into the evolution of higher education in Australia.</p>
+                <h3>The Distribution of University <strong class="age">Age</strong> and <strong class="size">Size</strong> Across Australian States</h3>
+                <p>
+                    Australia has a majority of "Established" Age universities which lie between 25-49 years old. 
+                </p>
+
+                <p>
+                    In terms of size, some states have universities of a variety of sizes (such as QLD and NSW) but most states have at most 2 sizes of universities only.
+                </p>
 
                 <div class="available-interactions">
                     <ul>
@@ -128,7 +132,7 @@
             <div class="aus-focus-section">
                 <div class="flex-container">
                     <div class="text-content">
-                        <h3>Is there a correlation between Age and Size?</h3>
+                        <h3>Is there a correlation between the <strong class="age">Age</strong> and <strong class="size">Size</strong> of Australian Universities?</h3>
 
                         <div class="available-interactions">
                             <ul>
@@ -136,15 +140,29 @@
                             </ul>
                         </div>
 
-                        <p>Investigate the interplay between university age and size through this heatmap visualization. 
-                        Understanding this relationship can help stakeholders make informed decisions about university development and resource allocation.</p>
+                        <p>
+                            There are a significant majority of universities that are "Established" (Age = 3) and Large (Size = L). There are barely any small (S) universities or very young (Age = 2) universities.
+                        </p>
+
                     </div>
                     <div class="chart" id="heatmap"></div>
                 </div>
             </div>
 
             <div class="aus-focus-section">
-                <h3>Comparing Multiple Attributes</h3>
+                <h3>Comparing Top Australian Universities across Important Parameters</h3>
+
+                <p>
+                    There appears to be a common trend of Australian universities performing especially well in certain parameters which involve the international sphere (such as the International Students and Faculty scores). 
+                    This is justified as Australia is a very popular destination for immigration.
+                </p>
+                <p>
+                    However, we can see all the universities underperform astronomically in the Faculty Student Score - this significantly brings down the overall score. This gives us a very useful insight that a shortage of Higher Education Workers are limiting Australian universities
+                    from reaching their full potential in offering the best education.
+
+                    More information on QS Universities methodology in computing these scores can be found <a href="https://support.qs.com/hc/en-gb/articles/4405955370898-QS-World-University-Rankings">here.</a>
+
+                </p>
 
                 <div class="available-interactions">
                     <ul>
@@ -153,15 +171,13 @@
                     </ul>
                 </div>
 
-                <p>In this section, we explore the comparative analysis of various attributes of Australian universities. 
-                This multi-dimensional perspective reveals the complex nature of higher education institutions and their standings.</p>
                 <div class="chart center-chart" id="para_coord_plot"></div>
             </div>
             
         </section>
 
         <footer>
-            <p class="subheading">Created by Diya Ramesh. Data from QS University Rankings, retrieved here.</p>
+            <p class="subheading">Created by <a href="https://github.com/dyarmsh">Diya Ramesh</a>. Data from QS University Rankings, retrieved <a href="https://www.kaggle.com/datasets/joebeachcapital/qs-world-university-rankings-2024">here</a>.</p>
         </footer>
     </div>
 

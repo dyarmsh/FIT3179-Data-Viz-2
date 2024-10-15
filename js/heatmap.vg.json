@@ -15,7 +15,8 @@
       "y": {
         "field": "SIZE",
         "type": "ordinal",
-        "title": "University Size"
+        "title": "University Size",
+        "sort": ["XL", "L", "M", "S"]
       },
       "color": {
         "aggregate": "count",
@@ -24,7 +25,7 @@
         "scale": {
           "domainMin": 0,
           "domainMax": 10,
-          "scheme": "blues",
+          "scheme": "yellowgreenblue",
           "type": "linear"
         }
       },
