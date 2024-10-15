@@ -1,5 +1,6 @@
 {
-  "width": 500,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
   "height": 500,
   "config": {
     "legend": {
@@ -17,8 +18,8 @@
       "bind": {
         "input": "select",
         "options": ["All", "S", "M", "L", "XL"],
-        "labels": ["All", "Small", "Medium", "Large", "Extra Large"],
-        "name": "University Size: "
+        "labels": ["All Sizes", "Small", "Medium", "Large", "Extra Large"],
+        "name": "Filter by Size: "
       }
     },
     {
@@ -27,8 +28,8 @@
       "bind": {
         "input": "select",
         "options": ["All", "1", "2", "3", "4", "5"],
-        "labels": ["All", "1", "2", "3", "4", "5+"],
-        "name": "University Age: "
+        "labels": ["All Ages", "1", "2", "3", "4", "5+"],
+        "name": "Filter by Age: "
       }
     }
   ],
@@ -96,7 +97,8 @@
           },
           "legend": {
             "title": "State",
-            "orient": "left",
+            "orient": "top",   
+            "direction": "horizontal",
             "titleFontSize": 14,
             "labelFontSize": 12,
             "symbolSize": 150
@@ -109,43 +111,14 @@
           },
           "value": 0.1
         },
-        
         "tooltip": [
-          {
-            "field": "Institution Name",
-            "type": "nominal",
-            "title": "University"
-          },
-          {
-            "field": "State",
-            "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "City",
-            "type": "nominal",
-            "title": "City"
-          },
-          {
-            "field": "Australian Rank",
-            "type": "quantitative",
-            "title": "2024 Australian Rank"
-          },
-          {
-            "field": "2024 RANK",
-            "type": "quantitative",
-            "title": "2024 Rank"
-          },
-          {
-            "field": "SIZE",
-            "type": "nominal",
-            "title": "Size"
-          },
-          {
-            "field": "AGE",
-            "type": "ordinal",
-            "title": "Age"
-          }
+          {"field": "Institution Name", "type": "nominal", "title": "University"},
+          {"field": "State", "type": "nominal", "title": "State"},
+          {"field": "City", "type": "nominal", "title": "City"},
+          {"field": "Australian Rank", "type": "quantitative", "title": "2024 Australian Rank"},
+          {"field": "2024 RANK", "type": "quantitative", "title": "2024 World Rank"},
+          {"field": "SIZE", "type": "nominal", "title": "Size"},
+          {"field": "AGE", "type": "ordinal", "title": "Age"}
         ]
       },
       "selection": {
