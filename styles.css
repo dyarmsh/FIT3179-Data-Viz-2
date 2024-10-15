@@ -109,7 +109,7 @@ section {
 .australia-focus {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 64px;
 }
 
 /* Chart Styles */
