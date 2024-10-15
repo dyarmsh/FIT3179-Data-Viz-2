@@ -1,16 +1,29 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Parallel coordinates plot for the top 10 Australian universities based on several scores.",
+  "description": "Parallel coordinates plot for the top Australian universities based on several scores.",
   "width": 800,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/dyarmsh/FIT3179-Data-Viz-2/refs/heads/main/data/aus_universities_cleaned.csv",
     "format": {"type": "csv"}
   },
+  "params": [
+    {
+      "name": "topN",
+      "value": 5,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 15,
+        "step": 1,
+        "name": "Filter Top N Universities:"
+      }
+    }
+  ],
   "transform": [
     {"filter": "datum['Country'] == 'Australia'"},
     {"window": [{"op": "rank", "as": "Rank"}], "sort": [{"field": "Rank", "order": "ascending"}]},
-    {"filter": "datum['Rank'] <= 10"},
+    {"filter": "datum['Rank'] <= topN"},
     {"window": [{"op": "row_number", "as": "Australian Rank"}]},
     {"fold": [
       "Academic Reputation Score",
@@ -19,7 +32,10 @@
       "Citations per Faculty Score",
       "International Faculty Score",
       "International Students Score",
-      "Employment Outcomes Score"
+      "Employment Outcomes Score",
+      "International Research Network Score",
+      "Sustainability Score",
+      "Overall SCORE"
     ]},
     {
       "calculate": "toNumber(datum.value)", 
@@ -33,6 +49,18 @@
         "detail": {"aggregate": "count"},
         "x": {
           "field": "key",
+          "sort": [
+            "Academic Reputation Score",
+            "Employer Reputation Score",
+            "Faculty Student Score",
+            "Citations per Faculty Score",
+            "International Faculty Score",
+            "International Students Score",
+            "Employment Outcomes Score",
+            "International Research Network Score",
+            "Sustainability Score",
+            "Overall SCORE"
+          ],
           "axis": {
             "labelAngle": 50
           }
@@ -42,10 +70,18 @@
     {
       "mark": {
         "type": "line",
-        "strokeWidth": 2  
+        "strokeWidth": 1.5 
       },
       "encoding": {
-        "color": {"type": "nominal", "field": "Institution Name"},
+        "color": {
+          "type": "nominal", 
+          "field": "Institution Name",
+          "legend": {
+                "title": "Top Universities in Australia",
+                "orient": "right",
+                "direction": "vertical"
+            }
+        },
         "detail": {"type": "nominal", "field": "index"},
         "opacity": {
           "condition": {
@@ -57,6 +93,18 @@
         "x": {
           "type": "nominal",
           "field": "key",
+          "sort": [
+            "Academic Reputation Score",
+            "Employer Reputation Score",
+            "Faculty Student Score",
+            "Citations per Faculty Score",
+            "International Faculty Score",
+            "International Students Score",
+            "Employment Outcomes Score",
+            "International Research Network Score",
+            "Sustainability Score",
+            "Overall SCORE"
+          ],
           "axis": {
             "labelAngle": 0               
           }
@@ -67,8 +115,7 @@
           "axis": {
             "title": "Scores",
             "labelFontSize": 12,
-            "titleFontSize": 14,
-            "grid": true 
+            "titleFontSize": 14
           }
         },
         "tooltip": [
@@ -79,7 +126,10 @@
           {"field": "Citations per Faculty Score", "type": "quantitative"},
           {"field": "International Faculty Score", "type": "quantitative"},
           {"field": "International Students Score", "type": "quantitative"},
-          {"field": "Employment Outcomes Score", "type": "quantitative"}
+          {"field": "Employment Outcomes Score", "type": "quantitative"},
+          {"field": "International Research Network Score", "type": "quantitative"},
+          {"field": "Sustainability Score", "type": "quantitative"},
+          {"field": "Overall SCORE", "type": "quantitative"}
         ]
       },
       "selection": {
@@ -104,6 +154,18 @@
         "x": {
           "type": "nominal",
           "field": "key",
+          "sort": [
+            "Academic Reputation Score",
+            "Employer Reputation Score",
+            "Faculty Student Score",
+            "Citations per Faculty Score",
+            "International Faculty Score",
+            "International Students Score",
+            "Employment Outcomes Score",
+            "International Research Network Score",
+            "Sustainability Score",
+            "Overall SCORE"
+          ],
           "axis": {
             "labelAngle": 0     
           }
@@ -129,7 +191,17 @@
             "field": "2024 RANK",
             "type": "quantitative",
             "title": "2024 Global Rank"
-          }
+          },
+          {"field": "Academic Reputation Score", "type": "quantitative"},
+          {"field": "Employer Reputation Score", "type": "quantitative"},
+          {"field": "Faculty Student Score", "type": "quantitative"},
+          {"field": "Citations per Faculty Score", "type": "quantitative"},
+          {"field": "International Faculty Score", "type": "quantitative"},
+          {"field": "International Students Score", "type": "quantitative"},
+          {"field": "Employment Outcomes Score", "type": "quantitative"},
+          {"field": "International Research Network Score", "type": "quantitative"},
+          {"field": "Sustainability Score", "type": "quantitative"},
+          {"field": "Overall SCORE", "type": "quantitative"}
         ]
       }
     }
